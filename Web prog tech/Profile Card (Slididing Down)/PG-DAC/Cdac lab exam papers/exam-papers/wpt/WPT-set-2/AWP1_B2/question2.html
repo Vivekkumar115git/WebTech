@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<textarea id="text" ></textarea>
+<div id="error"></div>
+
+
+<script>
+    const textAreaNode = document.querySelector("#text");
+    const resultNode = document.querySelector("#error");
+    resultNode.innerText = `10 Characters remaining`
+    textAreaNode.addEventListener("keyup",maxCharacters);
+    function maxCharacters(e) {
+       e.preventDefault();
+      let textAreaContent = textAreaNode.value;
+      if(textAreaContent.length < 10){
+        resultNode.innerText = `${ 10 - textAreaContent.length} Characters remaining`;
+      }else if(textAreaContent.length == 10){
+          textAreaNode.setAttribute("disabled",true);
+          resultNode.innerText = "Max Character Reached";
+      }
+    }
+</script>
+</body>
+</html>
