@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <script>
+        function handler1(){
+            let currentValue=document.getElementById("p1").innerText
+            if(currentValue=="WAITING..."){
+                currentValue=0
+            }
+            else{
+                currentValue=parseInt(currentValue)+1
+            }
+            document.getElementById("p1").innerText=currentValue
+
+        }
+
+        function handler2(){
+            let currentValue=document.getElementById("p1").innerText
+            if(currentValue!=0){
+                
+            
+            
+                currentValue=parseInt(currentValue)-1
+            }
+            document.getElementById("p1").innerText=currentValue
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div>
+       <button onclick="handler1()">INCR</button>
+       <button onclick="handler2()">DECR</button>
+       <h1 id="p1">
+        WAITING...
+       </h1>
+
+       
+
+    </div>
+
+</body>
+</html>
