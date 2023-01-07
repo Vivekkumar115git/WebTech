@@ -1,0 +1,14 @@
+#formDiv{
+    margin: 130px;
+    padding: 20px;
+    background-color:azure transparent;
+    
+
+}
+
+body{
+    background-color: aqua;
+    background-image: url("imgageta.jpg");
+    background-size: cover;
+    
+}
